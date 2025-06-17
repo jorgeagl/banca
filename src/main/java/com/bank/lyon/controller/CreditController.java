@@ -29,4 +29,10 @@ public class CreditController {
     public Credit getCredit(@PathVariable("id") String id) {
         return creditRepository.findById("id");
     }
+
+    @DeleteMapping("/credit/{id}")
+    public ResponseEntity<Void> deleteCredit(@PathVariable("id") String id) {
+        creditRepository.deleteById(id);
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
 }

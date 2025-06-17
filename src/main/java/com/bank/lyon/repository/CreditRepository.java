@@ -6,4 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 public interface CreditRepository extends MongoRepository<Credit, Integer> {
 
     Credit findById(String id);
+
+    void deleteById(String id);
 }

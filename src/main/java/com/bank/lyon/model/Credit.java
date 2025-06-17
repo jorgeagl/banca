@@ -14,6 +14,7 @@ public class Credit {
 
     @Id
     private String id;
+    private String user_id;
     private String name;
     private String type;
     private String description;
